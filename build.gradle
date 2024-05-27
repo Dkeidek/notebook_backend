@@ -25,3 +25,6 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+jar {
+	archiveFileName = 'notebook_backend-0.0.1-SNAPSHOT.jar'
+}
