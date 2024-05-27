@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM gradle:8-jdk21 as builder
+FROM gradle:8-jdk21 as build
 WORKDIR /home/gradle/src
 COPY --chown=gradle:gradle . /home/gradle/src
 RUN gradle build --no-daemon
