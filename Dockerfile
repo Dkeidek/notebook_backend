@@ -1,10 +1,8 @@
-# Stage 1: Build the application
-FROM gradle:8-jdk21 as build
-WORKDIR /home/gradle/src
-COPY --chown=gradle:gradle . /home/gradle/src
-RUN gradle build --no-daemon
+FROM gradle:8-jdk21 as builder
+WORKDIR /
+COPY . ./
+RUN gradle build
 
-# Stage 2: Run the application
-FROM eclipse-temurin:21-jdk-jammy
-COPY --from=build /home/gradle/src/build/libs/notebook_backend-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+FROM openjdk:21-slim
+COPY --from=builder build/libs .
+ENTRYPOINT ["java","-jar","/todolist_backend-0.0.1-SNAPSHOT.jar"]
