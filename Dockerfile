@@ -6,6 +6,5 @@ RUN gradle build --no-daemon
 
 # Stage 2: Run the application
 FROM eclipse-temurin:21-jdk-jammy
-WORKDIR /app
 COPY --from=build /home/gradle/src/build/libs/notebook_backend-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
