@@ -1,27 +1,26 @@
 package htwberlin.todolist_backend.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 
-@Entity
+@Entity (name = "notebook")
 public class Notebook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
-
+    @Column(name = "description")
    private String description;
-   private String User;
+    @Column(name = "owner")
+   private String owner;
 
 
     public Notebook() {}
 
-    public Notebook(String description, String user) {
+    public Notebook(String description, String owner) {
         this.description = description;
-        User = user;
+        owner = owner;
     }
 
     public Long getId() {
@@ -40,11 +39,11 @@ public class Notebook {
         this.description = description;
     }
 
-    public String getUser() {
-        return User;
+    public String getOwner() {
+        return owner;
     }
 
-    public void setUser(String user) {
-        User = user;
+    public void setOwner(String owner) {
+        owner = owner;
     }
 }
