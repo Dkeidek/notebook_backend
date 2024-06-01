@@ -14,6 +14,10 @@ public class NotebookService {
         return repo.findById(id).orElseThrow(RuntimeException::new);
     }
 
+    public Notebook save(Notebook notebook) {
+        return repo.save(notebook);
+    }
+
 
 
 }

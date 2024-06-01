@@ -20,7 +20,7 @@ public class Notebook {
 
     public Notebook(String description, String owner) {
         this.description = description;
-        owner = owner;
+        this.owner = owner;
     }
 
     public Long getId() {
@@ -44,6 +44,6 @@ public class Notebook {
     }
 
     public void setOwner(String owner) {
-        owner = owner;
+        this.owner = owner;
     }
 }

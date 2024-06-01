@@ -7,10 +7,7 @@ import htwberlin.todolist_backend.service.NotebookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.logging.Logger;
 @CrossOrigin
@@ -21,11 +18,19 @@ public class NotebookController {
 
 
 
-    @GetMapping("/things/{id}")
-    public Notebook getThing(@PathVariable String id) {
+    @GetMapping("/notebook/{id}")
+    public Notebook getNotebook(@PathVariable String id) {
         Long thingId = Long.parseLong(id);
         return notebookService.get(thingId);
     }
+
+   @PostMapping("/notebook")
+    public Notebook createNotebook(@RequestBody Notebook notebook) {
+        return notebookService.save(notebook);
+    }
+
+
+
 
 
 
