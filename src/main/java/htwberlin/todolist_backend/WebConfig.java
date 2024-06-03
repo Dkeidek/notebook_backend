@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedMethods("*")
-                .allowedOrigins("http://localhost:5173", "https://notebook-frontend-pl4e.onrender.com")
+                .allowedOrigins("http://localhost:5173", "https://notebook-u8nm.onrender.com")
                 .allowCredentials(true);
     }
 }
