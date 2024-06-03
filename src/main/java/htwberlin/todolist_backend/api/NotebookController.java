@@ -7,8 +7,10 @@ import htwberlin.todolist_backend.service.NotebookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.logging.Logger;
 @CrossOrigin
 @RestController
@@ -20,13 +22,24 @@ public class NotebookController {
 
     @GetMapping("/notebook/{id}")
     public Notebook getNotebook(@PathVariable String id) {
-        Long thingId = Long.parseLong(id);
-        return notebookService.get(thingId);
+        Long notebookid = Long.parseLong(id);
+        return notebookService.get(notebookid);
+    }
+
+    @GetMapping("/notebook")
+    public List <Notebook> getAllNotebooks() {
+        return notebookService.findAll();
     }
 
    @PostMapping("/notebook")
     public Notebook createNotebook(@RequestBody Notebook notebook) {
         return notebookService.save(notebook);
+    }
+    @GetMapping(path= "/api/a1/task")
+    public ResponseEntity<List<Notebook>> fetchTask(){
+        List<Notebook> tasks = notebookService.findAll();
+        System.out.println("Fetched tasks: " + tasks);
+        return ResponseEntity.ok(tasks);
     }
 
 
