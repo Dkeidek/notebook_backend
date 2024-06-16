@@ -34,4 +34,18 @@ public class NotebookService {
 
 
 
+    public Notebook update(Notebook notebook) {
+        if (repo.existsById(notebook.getId())) {
+            return repo.save(notebook);
+        } else {
+            throw new RuntimeException("Notebook not found");
+        }
+    }
+
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
+
+
+
 }

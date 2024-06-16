@@ -43,9 +43,16 @@ public class NotebookController {
     }
 
 
+    @PutMapping("/notebook/{id}")
+    public Notebook updateNotebook(@PathVariable Long id, @RequestBody Notebook notebook) {
+        notebook.setId(id);
+        return notebookService.update(notebook);
+    }
 
-
-
-
+    @DeleteMapping("/notebook/{id}")
+    public ResponseEntity<Void> deleteNotebook(@PathVariable Long id) {
+        notebookService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 
 }
