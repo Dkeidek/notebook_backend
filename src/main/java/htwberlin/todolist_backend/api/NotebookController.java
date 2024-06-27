@@ -35,12 +35,7 @@ public class NotebookController {
     public Notebook createNotebook(@RequestBody Notebook notebook) {
         return notebookService.save(notebook);
     }
-    @GetMapping(path= "/api/a1/task")
-    public ResponseEntity<List<Notebook>> fetchTask(){
-        List<Notebook> tasks = notebookService.findAll();
-        System.out.println("Fetched tasks: " + tasks);
-        return ResponseEntity.ok(tasks);
-    }
+
 
 
     @PutMapping("/notebook/{id}")
