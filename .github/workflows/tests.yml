@@ -12,5 +12,9 @@ jobs:
         with:
           distribution: "adopt"
           java-version: 21
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Check Gradle Version
+        run: ./gradlew --version
       - name: Clean Build
-        run: ./gradlew clean test --info --stacktrace
+        run: ./gradlew clean test --info --stacktrace --warning-mode all

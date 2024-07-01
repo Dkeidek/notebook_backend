@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="htwberlin.todolist_backend.api.NotebookControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-07-01T18:42:44" hostname="DELL" time="1.462">
+  <properties/>
+  <testcase name="testDeleteNotebook()" classname="htwberlin.todolist_backend.api.NotebookControllerTest" time="1.303"/>
+  <testcase name="testGetAllNotebooks()" classname="htwberlin.todolist_backend.api.NotebookControllerTest" time="0.155"/>
+  <system-out><![CDATA[2024-07-01T20:42:46.007+02:00  INFO 35072 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-07-01T20:42:46.007+02:00  INFO 35072 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-01T20:42:46.012+02:00  INFO 35072 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-01T20:42:46.233+02:00  INFO 35072 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2024-07-01T20:42:46.234+02:00  INFO 35072 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-01T20:42:46.234+02:00  INFO 35072 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\mohdk\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.13\979ce25f7d3096a2e82214ba7dc972a05ce7a171\byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
