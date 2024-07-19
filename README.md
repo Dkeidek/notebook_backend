@@ -9,4 +9,4 @@ Eine notebook App, Benutzer können sich anmelden und auf ihre persönlichen Not
 Benutzer können neue Notizen erstellen, bearbeiten und löschen.
 
 Wie Sie hier sehen können
-https://github.com/Dkeidek/notebook_backend/blob/main/Screenshot%202024-07-19%20155536.png?raw=true
+![Screenshot](https://github.com/Dkeidek/notebook_backend/blob/main/Screenshot%202024-07-19%20155536.png?raw=true)
